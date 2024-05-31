@@ -342,6 +342,10 @@ void NumToDigitUnits(unsigned int num, int* in)
 }
 
 #ifdef WIN_RELEASE
+    #ifndef UNICODE
+        #define UNICODE
+    #endif
+
 #include <Windows.h>
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     PSTR lpCmdLine, int nCmdShow)
